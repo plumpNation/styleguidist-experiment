@@ -6,20 +6,10 @@ class CrazyButton extends React.PureComponent {
         text: PropTypes.string
     }
 
-    static defaultProps = {
-        text: 'Hello world'
-    }
-
-    constructor(props) {
-        super(props)
-
-        console.log('boom')
-    }
-
     render() {
         return (
             <div>
-                <button>{this.props.text}</button>
+                <button>{this.props.text || this.props.children}</button>
             </div>
         )
     }
